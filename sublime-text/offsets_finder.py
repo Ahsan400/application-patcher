@@ -22,7 +22,7 @@ def make_bytes_literal(hex_val):
     for item in hex_val:
         if isinstance(item, str):
             item = hex_val[item]
-        item["value"] = bytes.fromhex(item["value"].replace(" ", ""))
+        item["value"] = bytes.fromhex(item["value"].replace(" ", "    "))
         item["size"] = len(item["value"])
     return hex_val
 
